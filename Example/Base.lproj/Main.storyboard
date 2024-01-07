@@ -16,20 +16,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello WOrld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QnZ-mE-rm8">
-                                <rect key="frame" x="150.66666666666666" y="428" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello WOrld" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QnZ-mE-rm8">
+                                <rect key="frame" x="0.0" y="152" width="393" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcM-dC-ahY">
+                                <rect key="frame" x="0.0" y="105" width="393" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Say hello"/>
+                                <connections>
+                                    <action selector="helloButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VtS-Zb-yFD"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k8o-3u-b3c">
+                                <rect key="frame" x="12" y="59" width="369" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QnZ-mE-rm8" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Biu-u9-KVM"/>
-                            <constraint firstItem="QnZ-mE-rm8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qwk-Nz-cyy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k8o-3u-b3c" secondAttribute="trailing" constant="12" id="3TH-CF-Axe"/>
+                            <constraint firstItem="XcM-dC-ahY" firstAttribute="top" secondItem="k8o-3u-b3c" secondAttribute="bottom" constant="12" id="COB-bb-EA8"/>
+                            <constraint firstItem="k8o-3u-b3c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="EEi-cn-kVZ"/>
+                            <constraint firstAttribute="trailing" secondItem="QnZ-mE-rm8" secondAttribute="trailing" id="bH7-vs-byf"/>
+                            <constraint firstItem="XcM-dC-ahY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ldD-6P-yTR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XcM-dC-ahY" secondAttribute="trailing" id="nB5-Jj-V63"/>
+                            <constraint firstItem="QnZ-mE-rm8" firstAttribute="top" secondItem="XcM-dC-ahY" secondAttribute="bottom" constant="12" id="s7h-TY-PX2"/>
+                            <constraint firstItem="k8o-3u-b3c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vp6-mU-LfG"/>
+                            <constraint firstItem="QnZ-mE-rm8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y5z-I9-xWP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="QnZ-mE-rm8" id="Xpf-DS-Mbz"/>
+                        <outlet property="textField" destination="k8o-3u-b3c" id="iG5-Rw-yLr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
