@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func helloButtonClicked(_ sender: Any) {
-        greetingLabel.text = "Hello \(textField.text ?? "")!"
+        greetingLabel.text = "Hello \(textField.text ?? "") How Are You!"
     }
 }
 
